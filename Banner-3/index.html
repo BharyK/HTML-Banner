@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Headder</title>
+        <link rel = "stylesheet" href = "css/style.css" />
+        <script src="js/jquery-3.3.1.js"></script>
+    </head>
+
+<body>
+    <div class="container">
+        <div class="sub-continer">
+            <h1></h1>
+            <h4></h4>
+        </div>
+    </div>
+    <script>
+            $(document).ready(function(){
+                    var assets = [{
+                        image:"img/image-1.jpg",
+                        h1: "Get This Stunning Fade In Fade Out Banner",
+                        h2:"Our fade in fade out banner code is easy to use. Copy the code below remove our images and replace with yours.",
+
+                    },{
+                        image:"img/image-2.jpg",
+                        h1:"Having A Fading Banner Makes Your Site Look More Professional",
+                        h2:"Make sure you replace our images with images that are eye-catching and grab the attention of your visitor.",
+                    },
+
+                    {
+                        image:"img/image-3.jpg",
+                        h1:"Copy Our Slideshow Code Today",
+                        h2:"We make it easy to have your own slideshow as your top banner - Copy the below code.",
+                    }
+                        
+
+                ]
+				
+				
+                    var Min_Val = 1;
+					 $(".container").css('background-image', 'url(' + assets[0].image + ')').fadeOut (1000).fadeIn (2000);
+                        $("h1").html (assets[0].h1).fadeOut (1000).fadeIn (2000);
+                        $("h4").html(assets[0].h2).fadeOut (1000).fadeIn (2000);
+                   
+                    setInterval (function (){
+                        $(".container").css('background-image', 'url(' + assets[Min_Val].image + ')').fadeOut (1000).fadeIn (2000);
+                        $("h1").html (assets[Min_Val].h1).fadeOut (1000).fadeIn (2000);
+                        $("h4").html(assets[Min_Val].h2).fadeOut (1000).fadeIn (2000);
+                        Min_Val++;
+
+                        if (Min_Val == assets.length){
+                            setTimeout (function(){
+                                Min_Val = 0;
+                            },5000)
+                        }
+                    }, 5500)
+                    
+                
+            });
+    </script>
+</body>
+</html>
