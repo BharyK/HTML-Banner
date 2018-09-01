@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>My Social profile</title>
+        <!--Local css file -->
+        <link href="css/style.css" rel="stylesheet" type = "text/css" />
+        <!--bootstrap CSS file -->
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <!--Pulling Awesome Font -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+<body>
+    <div class="footer">
+        <p>Follow me & hover the icons</p>
+        <div class="col-md-12">
+         <ul class="social-network social-circle">
+             <li><a href="https://twitter.com/bharathkumarmb1" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+             <li><a href="https://plus.google.com/u/0/104490977766317812307" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+             <li><a href="https://www.linkedin.com/in/bharath-mb-218b42158/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+             <li><a href="https://www.quora.com/profile/Bharath-Mb-2" class="icoRss" title="Rss"><i class="fa fa-quora"></i></a></li>
+             <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+         </ul>				
+     </div>
+     </div>
+     <!--Social site font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--bootstrap css file site font -->
+     <script src="bootstrap/bootstrap.min.js"></script>
+    <!--Jquery plugin -->
+    <script type = "text/javascript" src = "js/jquery-3.3.1.js"></script>
+    <script>
+            $(document).ready (function (){
+               $("a").mouseover (function (){
+                   var color = $(this).css ("background");
+                   $(".footer").css ("background", color);
+                   $("p").css ("color" , "black");
+               });
+
+                $("a").mouseleave (function (){
+                   var color = $(this).css ("background");
+                   $(".footer").css ("background", "black");
+                   $("p").css ("color" , "white");
+               });
+               $(".icoFacebook").on ('click' , function (){
+                   alert ("I apologies, I am not using facebook");
+               })
+            });
+       </script>
+</body>
+</html>
