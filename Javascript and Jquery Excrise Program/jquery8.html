@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<style>
+	
+</style>
+</head>
+<script>
+	$(document).ready(function (){
+		var num = [1, 2, 3, 4, 5];
+		var MIN_Value = 0;
+		if (num.length > MIN_Value){
+		var randomVal = Math.floor((Math.random() * num.length));
+		$(".show").html (num[randomVal]);
+		}		
+	});
+</script>
+<body>
+<h1>When you refresh your page random take the value from array</h1>
+	<div class = "show"></div>
+</body>
+</html>

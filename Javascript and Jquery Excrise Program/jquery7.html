@@ -1,0 +1,48 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<style>
+	img {
+		width:200px;
+		height:200px;
+		float:left;
+		margin:10px;
+		cursor:pointer;
+	}
+	.box {
+		width:500px;
+		height:500px;
+	}
+	.box1 {
+		width:500px;
+		height:100px;
+		font:35px times of new romenl
+	}
+</style>
+</head>
+<script>
+	$(document).ready(function (){
+		var len = ["img/img-1.jpg", "img/img-2.jpg" , "img/img-3.jpg" , "img/img-4.jpg" , "img/img-5.jpg"];
+		for( var i=0;i<=len.length;i++){
+		$(".img"+i).attr ("src" , len[i]);
+			$(".img"+i).on ("click" , function (){
+				var userAnswer = $(this).attr ('src');
+				var userTxt = $(this).attr ('data-id');
+				$("#displayAnswer").attr ('src' ,userAnswer );
+				$("#displayTxt").html (userTxt);
+		});
+		}
+		
+	});
+</script>
+<body>
+	<img src = ""  class = "img0" data-id = "This is my first Image" alt = "image not display" >
+	<img src = ""  class = "img1" data-id = "This is my Second Image" alt = "image not display" >
+	<img src = ""  class = "img2" data-id = "This is my Third Image" alt = "image not display" >
+	<img src = ""  class = "img3" data-id = "This is my fourth Image" alt = "image not display" >
+	<img src = ""  class = "img4" data-id = "This is my fifth Image" alt = "image not display" >
+	
+	<img src = "" class = "box" id = "displayAnswer" />
+	<div class = "box1" id = "displayTxt" />
+</body>
+</html>

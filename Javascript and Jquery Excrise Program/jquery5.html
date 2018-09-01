@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<style>
+	img {
+		width:200px;
+		height:200px;
+		float:left;
+		margin:10px;
+		cursor:pointer;
+	}
+	 
+</style>
+</head>
+<script>
+	
+	$(document).ready(function (){
+		$(".img").on ("click" , function (){
+			var userValue = $(this).attr ("src");
+			//alert (userValue)
+			$("#displayImg").attr ("src" , userValue);
+		});
+		
+	});
+</script>
+<body>
+<h1>Click Event:- Click the above image you will get the same image in the another place</h1>
+	<img src = "img/img-1.jpg"  class = "img" alt = "image not display" >
+	<img src = "img/img-2.jpg"  class = "img" alt = "image not display" >
+	<img src = "img/img-3.jpg"  class = "img" alt = "image not display" >
+	<img src = "img/img-4.jpg"  class = "img" alt = "image not display" >
+	<img src = "img/img-5.jpg"  class = "img" alt = "image not display" ><br><br><br><br><br><br><br><br>
+	
+	<div class = ""><img src = "" id = "displayImg" /></div>
+</body>
+</html>

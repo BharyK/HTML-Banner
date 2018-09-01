@@ -1,0 +1,62 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<style>
+	.table{
+		//border:2px solid orange;
+		font-size:25px;
+		text-align:center;
+		cursor:pointer;
+	}
+	.box {
+		width:250px;
+		height:80px;
+		border:2px solid red;
+		font:30px times of new romen;
+		text-align:center;
+	
+	}
+	 
+</style>
+</head>
+<script>
+	$(document).ready(function (){
+		$(".table").on ("click" , function (){
+			var userValue = $(this).attr ("data-id");
+			$(".box").html (userValue);
+		});
+		
+	});
+</script>
+<body>
+<h1>Click Event:Click the table inside you ll get the result in the input box</h1>
+	<table id = "table" border = "1" width = "50%" style = "margin:auto;">
+		<tr>
+			<td><div class = "table" data-id = "one">1</div></td>
+			<td><div class = "table" data-id = "two">2</div></td>
+			<td><div class = "table" data-id = "three">3</div></td>
+			<td><div class = "table" data-id = "four">4</div></td>
+			<td><div class = "table" data-id = "five">5</div></td>
+			<td><div class = "table" data-id = "six">6</div></td>
+			<td><div class = "table" data-id = "seven">7</div></td>
+			<td><div class = "table" data-id = "eight">8</div></td>
+			<td><div class = "table" data-id = "nine">9</div></td>
+			<td><div class = "table" data-id = "ten">10</div></td>
+		</tr>
+		<tr>
+			<td><div class = "table" data-id = "eleven">11</div></td>
+			<td><div class = "table" data-id = "twelve">12</div></td>
+			<td><div class = "table" data-id = "thirteen">13</div></td>
+			<td><div class = "table" data-id = "fourteen">14</div></td>
+			<td><div class = "table" data-id = "fifteen">15</div></td>
+			<td><div class = "table" data-id = "sixteen">16</div></td>
+			<td><div class = "table" data-id = "seventenn">17</div></td>
+			<td><div class = "table" data-id = "eighteen">18</div></td>
+			<td><div class = "table" data-id = "nineteen">19</div></td>
+			<td><div class = "table" data-id = "twenty">20</div></td>
+		</tr>
+		
+	</table>
+	<div class = "box"></div>
+</body>
+</html>

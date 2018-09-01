@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+</head>
+<script>
+	$(document).ready(function (){
+	
+		//$("#img").attr("src" , "img/img-1.jpg").css ("width" , "500px").css ("height" , "500px");
+		$("#btn1").on("click", function (){
+			var txt = "this my first jquery";
+			$("p").html(txt);
+		});
+		
+		$("#btn2").on("click", function (){
+	
+			$("p").prepend("this my first jquery");
+		});
+	});
+</script>
+<body>
+
+	<img src = "" alt = "Image not display" id = "img"/>
+	
+	
+	<p></p>
+	
+	<p id = "p"></p>
+	<button id = "btn1">Show</button>
+	<button id = "btn2">Hide</button>
+</body>
+</html>

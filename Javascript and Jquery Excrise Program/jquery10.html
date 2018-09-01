@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<style>
+	.box {
+		width:250px;
+		height:250px;
+		border:2px solid red;
+		margin:auto;
+		cursor:pointer;
+	}
+</style>
+</head>
+<script>
+	var color = ["red" , "blue" , "yellow" , "black" , "green"];
+	var randomVal;
+	$(document).ready(function (){
+		$(".box").on ('click', function (){
+			randomVal = Math.floor((Math.random() * color.length));
+			$(this).css ("background" , color[randomVal]);
+		});
+	});
+</script>
+<body>
+<h1>Each click it's changing the box color</h1>
+	<div class = "box"></div>
+</body>
+</html>

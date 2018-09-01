@@ -1,0 +1,51 @@
+<html>
+<head>
+	<style>
+		.container{
+			border:2px solid black;
+			width:300px;
+			height:400px;
+			margin-left:500px;
+		
+		}
+		.input_1{
+			margin: 5%;	
+		}
+	</style>
+	<script>
+		var attempt = 3;
+		
+		function myFunction(){
+		
+		var a = document.getElementById ("inp1").value;
+		var b = document.getElementById ("inp2").value;
+			if( a=="nokia" && b=="123"){
+				document.getElementById ("container").style.display = "none";
+				document.getElementById ("successPage").style.display = "block";
+		}
+		else{
+			attempt--;
+			alert('remaining chance ' +attempt+ ' left');
+			if(attempt==0){
+				document.getElementById ("inp1").disabled = true;
+				document.getElementById ("inp2").disabled = true;
+				document.getElementById ("btn").disabled = true;
+			}
+		}
+		
+	}
+	</script>
+</head>
+<body>
+	<div class="container" id="container">
+		enter ur username:<input type="text" id="inp1" class="input_1" placeholder="enter ur username"><br>
+		enter ur password:<input type="text" id="inp2" class="input_1" placeholder="enter ur password"><br><br>
+		<button type="submit" id="btn" onclick="myFunction()">submit</button><br><br>
+		username="nokia";
+		password="123";
+	</div>
+	<div id="successPage" style="display:none;">
+		<h1>congragulation</h1>
+	</div>
+</body>
+</html>

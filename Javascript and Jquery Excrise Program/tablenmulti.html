@@ -1,0 +1,54 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<style>
+
+</style>
+</head>
+<script>
+var index = 1;
+	$(document).ready(function (){
+		$("#quantity").on ("keydown" , function (e){
+			var userVal = $(this).val();
+			var fixedVal = $("#fixedVal1").val();
+			var displayVal = userVal * fixedVal;
+			$("#total").val (displayVal)
+			//js feed and codepen
+			var eventKey = e.which || e.keyCode;
+			
+			if (eventKey == 9){
+			index++;
+				$("#products").append ("<tr><td><input type='text'  id= 'slno' value='"+index+"'/></td><td><input type='text'  id= 'slno' value='shirt'/></td><td><input type='text'  id= 'slno' value='850'/></td><td><input type='text'  id = 'quantity"+index+"' value=''/></td></tr>	");
+			}
+			
+		});
+		
+	});
+</script>
+<body>
+<h1>Just fill the quntity it ll show automatic price and you can able to move next also</h1>
+	<table id = "products" border = "1" width = "50%" style = "margin:auto;">
+		
+		<tr>
+			<th>sl.no</th>
+			<th>item</th>
+			<th>price</th>
+			<th>quantity</th>
+			<th>total</th>
+		</tr>
+		
+		
+		<tr>
+			<td><input type="text"  id= "slno" value="1"/></td>
+			<td><input type="text" class="item" value="Shirt"/></td>
+			<td><input type="text" class="item" id = "fixedVal1"value="650"disabled /></td>
+			<td><input type='text'  calss = "black" id = 'quantity' value=''/></td>
+			<td><input type="text" class="item" value="" id = "total"/></td>
+		</tr>
+		
+		
+		
+		
+	</table>
+</body>
+</html>

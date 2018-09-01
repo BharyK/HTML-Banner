@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+</head>
+<script>
+	$(document).ready(function (){
+		//$("#img").attr("src" , "img/img-1.jpg").css ("width" , "500px").css ("height" , "500px");
+		$("#btn1").on("click", function (){
+			$("p").fadeIn(1500);
+			//$("p").append("this my first jquery");
+		});
+		
+		$("#btn2").on("click", function (){
+			$("p").fadeOut(1500);
+			//$("p").prepend("this my first jquery");
+		});
+	});
+</script>
+<body>
+
+	
+	
+	
+	<p>Show and hide the pragraph</p>
+	
+	<p id = "p">THis is my first Jquery Progarm</p>
+	<button id = "btn1">Show</button>
+	<button id = "btn2">Hide</button>
+</body>
+</html>

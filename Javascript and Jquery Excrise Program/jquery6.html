@@ -1,0 +1,34 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<style>
+	img {
+		width:200px;
+		height:200px;
+		float:left;
+		margin:10px;
+		cursor:pointer;
+	}
+	 
+</style>
+</head>
+<script>
+	$(document).ready(function (){
+		var arrayImg = ["img/img-1.jpg", "img/img-2.jpg" , "img/img-3.jpg" , "img/img-4.jpg" , "img/img-5.jpg"];
+		for(var i=0; i<=arrayImg.length;  i++){
+			$(".img"+i).attr ("src" , arrayImg[i]);
+		}
+		
+	});
+</script>
+<body>
+<h1>Using array load the images</h1>
+	<img src = ""  class = "img0" alt = "image not display" >
+	<img src = ""  class = "img1" alt = "image not display" >
+	<img src = ""  class = "img2" alt = "image not display" >
+	<img src = ""  class = "img3" alt = "image not display" >
+	<img src = ""  class = "img4" alt = "image not display" >
+	
+	
+</body>
+</html>

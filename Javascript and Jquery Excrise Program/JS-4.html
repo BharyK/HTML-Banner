@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+	.Txt {
+		font-family:calibri;
+		font-size:35px;
+		font-weight:bold;
+		color:red;
+	}
+</style>
+<script>
+	var Min_Value = 0;
+	window.onload = function (){
+	var imgArray = ["img/img-1.jpg" , "img/img-2.jpg" ,"img/img-3.jpg" ,"img/img-4.jpg", "img/img-5.jpg" ];
+	
+	if (imgArray.length >= Min_Value){
+		document.getElementById ("img").src = imgArray[Min_Value];
+		imgArray.splice (0, Min_Value);
+		//alert (imgArray.length)
+		Min_Value++;
+	}
+	if (imgArray.length == Min_Value){
+		document.getElementById ("display").innerHTML = "Window Alert Game has been complete";
+		alert ("Window Alert Game has been complete");
+	}
+	
+	}
+</script>
+</head>
+<body>
+	<img src = "" id = "img" alt = "image not dispay" width = "300px" height = "300px" data-id = "25"/><br><br>
+	<div id = "display" class = "Txt"></div><br>
+	<button id = "btn" onclick = "window.onload()">Next</button>
+</body>
+</html>

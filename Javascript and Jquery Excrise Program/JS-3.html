@@ -1,0 +1,36 @@
+<html>
+<head>
+<script>
+	 function multy(){
+			var a = document.getElementById ("firstNum").value;
+			var b = document.getElementById ("lastNum").value;
+			var c = a*b;
+			document.getElementById ("totalP").innerHTML = c;
+	 }
+	  function divide(){
+			var a = document.getElementById ("firstNum").value;
+			var b = document.getElementById ("lastNum").value;
+			var c = a/b;
+			document.getElementById ("totalP").innerHTML = c;
+	 }
+	  function add(){
+			var a = document.getElementById ("firstNum").value;
+			var b = document.getElementById ("lastNum").value;
+			var c = a-b;
+			document.getElementById ("totalP").innerHTML = c;
+	 }
+</script>
+</head>
+<body>
+<p>First number:</p>
+<input type="number" id="firstNum">
+<p>Last number:</p>
+<input type="number" id="lastNum"><br><br>
+<button type="submit" id="multiply" onclick="multy()">multiple</button>
+<button type="submit" id="divide" onclick="divide()">divide</button>
+<button type="submit" id="sub" onclick="add()">sub</button><br><br>
+<div id="myDiv">
+	total:<p id="totalP"></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<style>
+	.table{
+		//border:2px solid orange;
+		font-size:25px;
+		text-align:center;
+		cursor:pointer;
+	}
+	.box {
+		width:250px;
+		height:80px;
+		border:2px solid red;
+		font:30px times of new romen;
+		text-align:center;
+	
+	}
+	 
+</style>
+</head>
+<script>
+	var counter = 0;
+	var val1;
+	var val2;
+	
+	$(document).ready(function (){
+		$(".table").on ('click' , function (){
+		counter++;
+			var userAnswer = $(this).html ();
+			
+			if (counter == 1){
+				for (var i=0;i<=userAnswer;i++){
+				 $("#img"+i).css ("background-color" , "red");
+				 var value1 = userAnswer;
+				 val1 = value1++;
+				}
+			}
+			
+			if (counter == 2){
+				for (var i=val1;i<=userAnswer;i++){
+				$("#img"+i).css ("background-color" , "blue");
+				val2 = userAnswer
+				}
+			}
+			
+			if (counter == 3){
+				for (var i=val2;i<=userAnswer;i++){
+				$("#img"+i).css ("background-color" , "green");
+				}
+			}
+		});
+	});
+</script>
+<body>
+<h1>Click the 3 times below 20 you ll be see different color each click</h1>
+	<table id = "table" border = "1" width = "50%" style = "margin:auto;">
+		<tr>
+			<td><div class = "table" id = "img1" data-id = "one">1</div></td>
+			<td><div class = "table" id = "img2"data-id = "two">2</div></td>
+			<td><div class = "table" id = "img3"data-id = "three">3</div></td>
+			<td><div class = "table" id = "img4"data-id = "four">4</div></td>
+			<td><div class = "table" id = "img5"data-id = "five">5</div></td>
+			<td><div class = "table" id = "img6"data-id = "six">6</div></td>
+			<td><div class = "table" id = "img7"data-id = "seven">7</div></td>
+			<td><div class = "table" id = "img8"data-id = "eight">8</div></td>
+			<td><div class = "table" id = "img9"data-id = "nine">9</div></td>
+			<td><div class = "table" id = "img10"data-id = "ten">10</div></td>
+		</tr>
+		<tr>
+			<td><div class = "table" id = "img11"data-id = "eleven">11</div></td>
+			<td><div class = "table" id = "img12"data-id = "twelve">12</div></td>
+			<td><div class = "table" id = "img13"data-id = "thirteen">13</div></td>
+			<td><div class = "table" id = "img14"data-id = "fourteen">14</div></td>
+			<td><div class = "table" id = "img15"data-id = "fifteen">15</div></td>
+			<td><div class = "table" id = "img16"data-id = "sixteen">16</div></td>
+			<td><div class = "table" id = "img17"data-id = "seventenn">17</div></td>
+			<td><div class = "table" id = "img18"data-id = "eighteen">18</div></td>
+			<td><div class = "table" id = "img19"data-id = "nineteen">19</div></td>
+			<td><div class = "table" id = "img20"data-id = "twenty">20</div></td>
+		</tr>
+	</table>
+	<div class = "box"></div>
+</body>
+</html>

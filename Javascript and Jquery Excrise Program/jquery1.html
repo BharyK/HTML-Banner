@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<style>
+	.showAns{
+		width:250px;
+		height:100px;
+		border:2px solid red;
+		text-align:center;
+		font:30px times of new romen;
+		line-height:30px;
+	}
+</style>
+</head>
+<script>
+var b = ['zero','one','two','three','four','five', 'six' , 'seven' , 'eight' , 'nine' , 'ten'];
+	$(document).ready(function (){
+		$("#btn1").on('click' , function (){
+			var a=$("#inp").val();
+			b.forEach(function(value, index, array) {
+			if (a < 20){
+				if(a==index){
+				$(".showAns").html(value);
+				}
+				
+				
+				
+				}
+				else {
+				$(".showAns").html("Please enter the below 10 number");
+				}
+			
+				
+			});
+		});	
+	});
+</script>
+<body>
+	<p>THis is my first Jquery Progarm</p>
+	<h1>Enter the number below 10 inside the input box</h1>
+	
+	<input type="text" id="inp">
+	<button id = "btn1">Click</button><br><br>
+	<div class = "showAns"></div>
+</body>
+</html>

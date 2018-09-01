@@ -1,0 +1,48 @@
+<html>
+<head>
+<script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<style>
+	
+</style>
+</head>
+<script>
+	var correctAns = 0;
+	
+	$(document).ready(function (){
+	
+			var question = ["1. Who is prime minister of inida","1. Who is prime minister of inida"];
+			var option = ["modi","rahul gandi","vgfhxvs","hds"];
+			$(".question").html(question[0]);
+			function displayNext(){
+				
+			}
+			for (var i=0; i<=option.length; i++){
+			    $(".option"+i).html (option[i]);
+			}
+			
+			$("#btn").on ('click' , function (){
+		
+				var val = $("input[type='radio']:checked").val();
+				if(val == correctAns){
+					alert('right');
+					displayNext();
+				}
+				else{
+					alert('wrong');
+				}	
+			})	
+	});
+</script>
+<body>
+	<div class = "question"></div>
+	
+<h1>Mulitple choice question</h1>
+	<input type = "radio" name = "name" value = "0"><div class = "option0"></div>
+	<input type = "radio" name = "name" value = "1"><div class = "option1"></div>
+	<input type = "radio" name = "name" value = "2"><div class = "option2"></div>
+	<input type = "radio" name = "name" value = "3"><div class = "option3"></div><br><br>
+	
+	<button id = "btn">Submit</button>
+	
+</body>
+</html>

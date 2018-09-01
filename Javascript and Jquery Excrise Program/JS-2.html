@@ -1,0 +1,25 @@
+<!docktype html>
+<html>
+<head>
+<title>Demo</title>
+<script>
+function userAnswer (){
+	var x = document.getElementById ("txt1").value;
+	var y = document.getElementById ("txt2").value;
+	var z = x * y;
+	document.getElementById ("demo").innerHTML = z;
+	
+	}
+</script>
+</head>
+
+<body>
+	
+	<input type = "text" name = "name" id = "txt1">+
+	<input type = "text" name = "name" id = "txt2">
+	
+	<button id = "btn" onclick = "userAnswer()">Ckick Me</button>
+	
+	<div id = "demo"></div>
+</body>
+</html>
